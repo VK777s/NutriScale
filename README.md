@@ -5,3 +5,13 @@ Current weight
 Target weight  
 Caloric requirements (caloric deficit or surplus based on weight goal) 
 Macronutrient balance (protein, carbs, fats)
+
+# Project overview
+
+# Features
+
+# Prerequisite
+
+# Usage
+
+# knowledge gained about using Python 
