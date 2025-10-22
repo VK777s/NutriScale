@@ -13,9 +13,13 @@ It helps users maintain a balanced diet by considering macronutrients — protei
 
 # Features
 🧮 Calculates daily calorie needs using user input (current and target weight).
+
 🍎 Suggests food options for both weight loss and weight gain.
+
 📊 Provides approximate macronutrient (protein, carbs, fat) distribution.
+
 🕒 Simple, interactive console-based interface.
+
 💡 Can be easily expanded with a food database or API integration later.
 
 # Prerequisite
