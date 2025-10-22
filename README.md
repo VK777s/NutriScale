@@ -8,6 +8,7 @@ Macronutrient balance (protein, carbs, fats)
 
 # Project overview
 NutriScale is a simple Python-based nutrition recommendation tool designed to help users achieve their target weight goals.
+
 By taking inputs such as current weight, target weight, and activity level, the program calculates the daily calorie requirement and provides suggestions for foods that support either a caloric deficit (for weight loss) or caloric surplus (for weight gain).
 It helps users maintain a balanced diet by considering macronutrients — protein, carbohydrates, and fats — to ensure healthy progress toward their fitness goals.
 
@@ -24,7 +25,9 @@ It helps users maintain a balanced diet by considering macronutrients — protei
 
 # Prerequisite
 Before running the program, make sure you have:
+
 Python 3.x installed on your system.
+
 Basic understanding of Python input/output and conditional statements.
 
 # Usage
@@ -36,6 +39,7 @@ Review the suggestions and adjust your diet plan accordingly.
 
 # knowledge gained about using Python 
 Through this project, you will learn:
+
 How to handle user input and conditional logic in Python.
 Basic principles of calorie balance and macronutrient distribution.
 How to design a simple console-based user interface.
