@@ -1,7 +1,9 @@
 # NutriScale: A Python-Based Diet & Nutrition Tracker 🍎
 
 NutriScale is a full-featured, GUI-based nutrition management system built with Python, Tkinter, and Matplotlib. It provides a complete solution for users to track their dietary intake, log meals, and visualize progress toward their weight goals.
+
 It helps users maintain a balanced diet by considering macronutrients — protein, carbohydrates, and fats — to ensure healthy progress toward their fitness goals. By taking inputs such as current weight, target weight, and activity level, the program calculates the daily calorie requirement and provides suggestions for foods that support either a caloric deficit (for weight loss) or caloric surplus (for weight gain).
+
 It also features a separate, comprehensive admin panel for managing the application's food database and user accounts.
 
 ## Screenshots
@@ -77,7 +79,10 @@ cd NutriScale
 pip install matplotlib
 ```
 
-#Through this project, we learned:
+# Through this project, we learned:
+
 How to handle user input and conditional logic in Python.
+
 Basic principles of calorie balance and macronutrient distribution.
+
 How to design a simple console-based user interface.
