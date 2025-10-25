@@ -73,3 +73,42 @@ cd NutriScale
 ```bash
 pip install matplotlib
 ```
+**3. Set up the database:**
+Before running either app, you must run the setup script once to create the nutriscale.db file and all the necessary tables.
+```bash
+python database_setup.py
+```
+This will create nutriscale.db in your project folder.
+
+
+## How to Run
+
+**Client Application**
+Run the main client app to log in, sign up, and track your meals.
+```bash
+python nutriscale_app.py
+```
+The first time you run it, click "Sign Up" to create a profile.
+After that, you can use the Login screen.
+
+**Admin Panel**
+Run the admin app to manage the food database or delete users.
+
+```bash
+python admin_app.py
+```
+This app runs completely independently of the client app.
+Changes made here (like adding a new food) will be instantly available in the client app.
+
+## File Structure
+NutriScale/
+│
+├── 📄 database_setup.py     # (RUN FIRST) Script to create the DB and tables
+│
+├── 📄 nutriscale_app.py      # (Client) The main user-facing application
+│
+├── 📄 admin_app.py           # (Admin) The admin management panel
+│
+├── 📄 nutriscale.db          # (Generated) The SQLite database file
+│
+└── 📄 README.md              # You are here!
