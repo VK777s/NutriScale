@@ -100,6 +100,7 @@ python admin_app.py
 This app runs completely independently of the client app.
 Changes made here (like adding a new food) will be instantly available in the client app.
 
+
 ## File Structure
 NutriScale/
 │
