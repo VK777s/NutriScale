@@ -63,7 +63,6 @@ The project is split into two main applications: the **Client Portal** and the *
 * **Data Visualization:** Matplotlib (embedded directly into the Tkinter GUI)
 
 ---
-
 ## ⚙️ Installation & Setup
 
 To run this project, you'll need Python 3 and one external library.
@@ -78,6 +77,33 @@ cd NutriScale
 ```bash
 pip install matplotlib
 ```
+**3. Set up the database:**
+Before running either app, you must run the setup script once to create the nutriscale.db file and all the necessary tables.
+```bash
+python database_setup.py
+```
+This will create nutriscale.db in your project folder.
+
+
+## How to Run
+
+**Client Application**
+Run the main client app to log in, sign up, and track your meals.
+```bash
+python nutriscale_app.py
+```
+The first time you run it, click "Sign Up" to create a profile.
+After that, you can use the Login screen.
+
+**Admin Panel**
+Run the admin app to manage the food database or delete users.
+
+```bash
+python admin_app.py
+```
+This app runs completely independently of the client app.
+Changes made here (like adding a new food) will be instantly available in the client app.
+
 
 # Through this project, we learned:
 
