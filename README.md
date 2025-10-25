@@ -2,6 +2,8 @@
 
 NutriScale is a full-featured, GUI-based nutrition management system built with Python, Tkinter, and Matplotlib. It provides a complete solution for users to track their dietary intake, log meals, and visualize progress toward their weight goals.
 
+It helps users maintain a balanced diet by considering macronutrients — protein, carbohydrates, and fats — to ensure healthy progress toward their fitness goals. By taking inputs such as current weight, target weight, and activity level, the program calculates the daily calorie requirement and provides suggestions for foods that support either a caloric deficit (for weight loss) or caloric surplus (for weight gain).
+
 It also features a separate, comprehensive admin panel for managing the application's food database and user accounts.
 
 ## Screenshots
@@ -50,6 +52,9 @@ The project is split into two main applications: the **Client Portal** and the *
 
 ---
 
+
+
+
 ## 🚀 Technical Stack
 
 * **Language:** Python 3.x
@@ -58,7 +63,6 @@ The project is split into two main applications: the **Client Portal** and the *
 * **Data Visualization:** Matplotlib (embedded directly into the Tkinter GUI)
 
 ---
-
 ## ⚙️ Installation & Setup
 
 To run this project, you'll need Python 3 and one external library.
@@ -101,15 +105,10 @@ This app runs completely independently of the client app.
 Changes made here (like adding a new food) will be instantly available in the client app.
 
 
-## File Structure
-NutriScale/
-│
-├── 📄 database_setup.py     # (RUN FIRST) Script to create the DB and tables
-│
-├── 📄 nutriscale_app.py      # (Client) The main user-facing application
-│
-├── 📄 admin_app.py           # (Admin) The admin management panel
-│
-├── 📄 nutriscale.db          # (Generated) The SQLite database file
-│
-└── 📄 README.md              # You are here!
+# Through this project, we learned:
+
+How to handle user input and conditional logic in Python.
+
+Basic principles of calorie balance and macronutrient distribution.
+
+How to design a simple console-based user interface.
