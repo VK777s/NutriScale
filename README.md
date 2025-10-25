@@ -1,46 +1,74 @@
-# NutriScale
-Concept:  The goal is to recommend food choices that help someone reach their target weight. 
-The food suggestions could depend on:  
-Current weight  
-Target weight  
-Caloric requirements (caloric deficit or surplus based on weight goal) 
-Macronutrient balance (protein, carbs, fats)
+# NutriScale: A Python-Based Diet & Nutrition Tracker 🍎
 
-# Project overview
-NutriScale is a simple Python-based nutrition recommendation tool designed to help users achieve their target weight goals.
+NutriScale is a full-featured, GUI-based nutrition management system built with Python, Tkinter, and Matplotlib. It provides a complete solution for users to track their dietary intake, log meals, and visualize progress toward their weight goals.
 
-By taking inputs such as current weight, target weight, and activity level, the program calculates the daily calorie requirement and provides suggestions for foods that support either a caloric deficit (for weight loss) or caloric surplus (for weight gain).
-It helps users maintain a balanced diet by considering macronutrients — protein, carbohydrates, and fats — to ensure healthy progress toward their fitness goals.
+It also features a separate, comprehensive admin panel for managing the application's food database and user accounts.
 
-# Features
-🧮 Calculates daily calorie needs using user input (current and target weight).
+## Screenshots
 
-🍎 Suggests food options for both weight loss and weight gain.
+| Client Login | Client Dashboard | Progress Charts | Admin Panel |
+| :---: | :---: | :---: | :---: |
+| 
 
-📊 Provides approximate macronutrient (protein, carbs, fat) distribution.
+[Image of Login Screen]
+(https://i.imgur.com/your-login-screenshot.png) | (https://i.imgur.com/your-dashboard-screenshot.png) | 
 
-🕒 Simple, interactive console-based interface.
+[Image of Charts]
+(https://i.imgur.com/your-charts-screenshot.png) | (https://i.imgur.com/your-admin-screenshot.png) |
+*(Note: Replace these links with your own screenshots after uploading!)*
 
-💡 Can be easily expanded with a food database or API integration later.
+---
 
-# Prerequisite
-Before running the program, make sure you have:
+## Features
 
-Python 3.x installed on your system.
+The project is split into two main applications: the **Client Portal** and the **Admin Panel**.
 
-Basic understanding of Python input/output and conditional statements.
+### 🔑 Client Portal (`nutriscale_app.py`)
 
-# Usage
-Run the Python script in your terminal or IDE.
-Enter your current weight, target weight, and activity level when prompted.
-The program will calculate your daily calorie goal.
-It will recommend a list of foods or meals to help reach your goal (e.g., high-protein foods for muscle gain or low-calorie foods for fat loss).
-Review the suggestions and adjust your diet plan accordingly.
+* **Secure Authentication:** Users can create a secure account (username/password) and log in.
+* **Personalized Profile:** On signup, users provide their age, weight, height, and activity level to calculate:
+    * Basal Metabolic Rate (BMR)
+    * Total Daily Energy Expenditure (TDEE)
+    * A target daily calorie goal (deficit/surplus).
+* **Daily Meal Logging:** Users can search the food database, enter a quantity (in grams), and log it to their daily journal.
+* **Smart Food Recommendations:** A recommendation engine suggests meal/snack ideas (with quantities) based on the user's remaining calories for the day.
+* **Progress Dashboard:** Users can visualize their progress with two dynamic charts:
+    * A line chart tracking weight changes over time.
+    * A bar chart comparing daily calorie intake against their target.
 
-# knowledge gained about using Python 
-Through this project, you will learn:
+### 🛠️ Admin Panel (`admin_app.py`)
 
-How to handle user input and conditional logic in Python.
-Basic principles of calorie balance and macronutrient distribution.
-How to design a simple console-based user interface.
-How to use functions to structure a real-world Python application.
+* **Tabbed Interface:** A clean, tabbed GUI for simple management.
+* **Food Database Management (CRUD):**
+    * **Create:** Add new food items with full nutritional data (calories, protein, carbs, fats).
+    * **Read:** View the entire food database in a sortable list.
+    * **Update:** Select a food to auto-fill its data, make changes, and save.
+    * **Delete:** Remove food items from the database.
+* **User Management:**
+    * View a list of all registered users and their profile details (username, name, goals, etc.).
+    * Delete users from the system. This also performs a "cascading delete" to remove all of their associated meal logs and weight history.
+
+---
+
+## 🚀 Technical Stack
+
+* **Language:** Python 3.x
+* **GUI:** Tkinter (via `ttk` for modern styling)
+* **Database:** SQLite 3 (for all user, food, and log data)
+* **Data Visualization:** Matplotlib (embedded directly into the Tkinter GUI)
+
+---
+
+## ⚙️ Installation & Setup
+
+To run this project, you'll need Python 3 and one external library.
+
+**1. Clone the repository:**
+```bash
+git clone [https://github.com/your-username/NutriScale.git](https://github.com/your-username/NutriScale.git)
+cd NutriScale
+
+
+
+
+
