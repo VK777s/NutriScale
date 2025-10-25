@@ -67,8 +67,9 @@ To run this project, you'll need Python 3 and one external library.
 ```bash
 git clone https://github.com/VK777s/NutriScale.git
 cd NutriScale
-
+```
 **2. Install dependencies:**
  The project requires matplotlib. You can install it using pip:
 ```bash
 pip install matplotlib
+```
