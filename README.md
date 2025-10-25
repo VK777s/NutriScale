@@ -65,7 +65,7 @@ To run this project, you'll need Python 3 and one external library.
 
 **1. Clone the repository:**
 ```bash
-git clone [https://github.com/your-username/NutriScale.git](https://github.com/your-username/NutriScale.git)
+git clone https://github.com/VK777s/NutriScale.git
 cd NutriScale
 
 
