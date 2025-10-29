@@ -1,114 +1,221 @@
-# NutriScale: A Python-Based Diet & Nutrition Tracker 🍎
+# NutriScale: CLI-Based Intelligent Nutrition & Fitness Tracker 🍎
 
-NutriScale is a full-featured, GUI-based nutrition management system built with Python, Tkinter, and Matplotlib. It provides a complete solution for users to track their dietary intake, log meals, and visualize progress toward their weight goals.
+NutriScale is a **Python-based command-line nutrition management system**. It provides a complete solution for tracking dietary intake, logging meals, and visualizing progress toward weight goals.
 
-It helps users maintain a balanced diet by considering macronutrients — protein, carbohydrates, and fats — to ensure healthy progress toward their fitness goals. By taking inputs such as current weight, target weight, and activity level, the program calculates the daily calorie requirement and provides suggestions for foods that support either a caloric deficit (for weight loss) or caloric surplus (for weight gain).
+Unlike GUI-based applications, this version is lightweight and terminal-friendly, suitable for multi-platform usage and team projects.
 
-It also features a separate, comprehensive admin panel for managing the application's food database and user accounts.
+It helps users maintain a balanced diet by calculating **BMR, daily calorie requirements**, and suggests meal plans based on caloric needs. Users can either accept automated meal suggestions or manually customize meals using a rich food database.
 
-## Screenshots
+An **Admin Portal** allows management of the food database with CRUD operations.
 
-| Client Login | Client Dashboard | Progress Charts | Admin Panel |
-| :---: | :---: | :---: | :---: |
-| 
+---
 
-[Image of Login Screen]
-(https://i.imgur.com/your-login-screenshot.png) | (https://i.imgur.com/your-dashboard-screenshot.png) | 
+## Project Structure
 
-[Image of Charts]
-(https://i.imgur.com/your-charts-screenshot.png) | (https://i.imgur.com/your-admin-screenshot.png) |
-*(Note: Replace these links with your own screenshots after uploading!)*
+The project is modularized into three Python files:
+
+| Module                 | Description                                                                                                       |
+| :--------------------- | :---------------------------------------------------------------------------------------------------------------- |
+| `database_module.py`   | Handles the **food database**, CRUD operations, and **daily logs**.                                               |
+| `calculator_module.py` | Calculates **BMI, calorie goals**, and provides **meal combination logic** using backtracking.                    |
+| `main_module.py`       | Implements the **CLI menus**, integrates database and calculator modules, and handles **client & admin portals**. |
 
 ---
 
 ## Features
 
-The project is split into two main applications: the **Client Portal** and the **Admin Panel**.
+### 🔑 Client Portal (`main_module.py`)
 
-### 🔑 Client Portal (`nutriscale_app.py`)
+* **Personalized Profile:** Users input age, weight, height, gender, and target weight to calculate:
 
-* **Secure Authentication:** Users can create a secure account (username/password) and log in.
-* **Personalized Profile:** On signup, users provide their age, weight, height, and activity level to calculate:
-    * Basal Metabolic Rate (BMR)
-    * Total Daily Energy Expenditure (TDEE)
-    * A target daily calorie goal (deficit/surplus).
-* **Daily Meal Logging:** Users can search the food database, enter a quantity (in grams), and log it to their daily journal.
-* **Smart Food Recommendations:** A recommendation engine suggests meal/snack ideas (with quantities) based on the user's remaining calories for the day.
-* **Progress Dashboard:** Users can visualize their progress with two dynamic charts:
-    * A line chart tracking weight changes over time.
-    * A bar chart comparing daily calorie intake against their target.
+  * **BMI**
+  * **Recommended daily calories**
+  * **Estimated time to reach goal**
+* **Meal Suggestions:** Based on calculated calories, the system suggests a combination of foods from the database.
+* **Custom Meal Planning:** Users can manually select foods and the program tracks total calories.
+* **Daily Logs:** All meals and calories are logged with timestamps for future review.
 
-### 🛠️ Admin Panel (`admin_app.py`)
+### 🛠️ Admin Portal (`main_module.py`)
 
-* **Tabbed Interface:** A clean, tabbed GUI for simple management.
 * **Food Database Management (CRUD):**
-    * **Create:** Add new food items with full nutritional data (calories, protein, carbs, fats).
-    * **Read:** View the entire food database in a sortable list.
-    * **Update:** Select a food to auto-fill its data, make changes, and save.
-    * **Delete:** Remove food items from the database.
-* **User Management:**
-    * View a list of all registered users and their profile details (username, name, goals, etc.).
-    * Delete users from the system. This also performs a "cascading delete" to remove all of their associated meal logs and weight history.
+
+  * **Create:** Add new foods with calories.
+  * **Read:** View all foods in the database.
+  * **Update:** Modify calorie values of existing foods.
+  * **Delete:** Remove foods from the database.
+* **Database Initialization:** Admin can populate the database with a default set of foods.
 
 ---
 
+## Default Food Database
 
+| Food             | Calories (kcal) |
+| :--------------- | :-------------: |
+| Oatmeal          |       150       |
+| Eggs             |       155       |
+| Chicken Breast   |       200       |
+| Rice             |       180       |
+| Salad            |       120       |
+| Fish             |       220       |
+| Apple            |        80       |
+| Banana           |       100       |
+| Milk             |       130       |
+| Yogurt           |        95       |
+| Almonds          |       160       |
+| Peanut Butter    |       190       |
+| Cheese           |       200       |
+| Broccoli         |        55       |
+| Carrots          |        50       |
+| Sweet Potato     |       100       |
+| Quinoa           |       120       |
+| Lentils          |       115       |
+| Tofu             |       150       |
+| Turkey           |       180       |
+| Spinach          |        25       |
+| Avocado          |       160       |
+| Strawberries     |        45       |
+| Blueberries      |        50       |
+| Orange           |        62       |
+| Watermelon       |        30       |
+| Cucumber         |        16       |
+| Tomato           |        20       |
+| Beef             |       250       |
+| Pork             |       220       |
+| Shrimp           |       100       |
+| Salmon           |       208       |
+| Tuna             |       180       |
+| Pasta            |       210       |
+| Bread            |        80       |
+| Bagel            |       250       |
+| Cereal           |       110       |
+| Granola          |       120       |
+| Honey            |        64       |
+| Jam              |        50       |
+| Chocolate        |       210       |
+| Ice Cream        |       207       |
+| Chickpeas        |       120       |
+| Black Beans      |       110       |
+| Kidney Beans     |       115       |
+| Rice Cakes       |        35       |
+| Popcorn          |        90       |
+| Walnuts          |       180       |
+| Cashews          |       160       |
+| Sunflower Seeds  |       170       |
+| Pumpkin Seeds    |       150       |
+| Oats             |       130       |
+| Cottage Cheese   |       120       |
+| Egg Whites       |        17       |
+| Green Peas       |        81       |
+| Zucchini         |        20       |
+| Mushrooms        |        22       |
+| Onions           |        40       |
+| Garlic           |        5        |
+| Bell Pepper      |        30       |
+| Cabbage          |        25       |
+| Cauliflower      |        25       |
+| Green Beans      |        35       |
+| Brussels Sprouts |        38       |
+| Asparagus        |        20       |
+| Pineapple        |        50       |
+| Mango            |        60       |
+| Papaya           |        43       |
+| Kiwi             |        42       |
+| Grapes           |        70       |
+| Pear             |        57       |
+| Peach            |        59       |
+| Plum             |        46       |
+| Apricot          |        48       |
+| Pomegranate      |        83       |
+| Dates            |       277       |
+| Raisins          |       299       |
+| Figs             |        74       |
+| Brown Rice       |       215       |
+| Barley           |       193       |
+| Millet           |       207       |
+| Bulgur           |       150       |
+| Buckwheat        |       155       |
+| Rye Bread        |        83       |
+| Sourdough        |       120       |
+| Tortilla         |       140       |
+| Avocado Toast    |       190       |
+| Hummus           |        75       |
+| Falafel          |       150       |
+| Tempeh           |       190       |
+| Soy Milk         |        80       |
+| Coconut Milk     |        45       |
+| Green Tea        |        0        |
+| Black Coffee     |        5        |
+| Protein Shake    |       200       |
 
+---
 
 ## 🚀 Technical Stack
 
 * **Language:** Python 3.x
-* **GUI:** Tkinter (via `ttk` for modern styling)
-* **Database:** SQLite 3 (for all user, food, and log data)
-* **Data Visualization:** Matplotlib (embedded directly into the Tkinter GUI)
+* **Database:** CSV-based storage for **foods** and **logs** (`food_database.csv`, `nutriscale_logs.csv`)
+* **CLI:** Terminal-based, cross-platform, no GUI dependencies
 
 ---
+
 ## ⚙️ Installation & Setup
 
-To run this project, you'll need Python 3 and one external library.
-
 **1. Clone the repository:**
+
 ```bash
 git clone https://github.com/VK777s/NutriScale.git
 cd NutriScale
 ```
+
 **2. Install dependencies:**
- The project requires matplotlib. You can install it using pip:
-```bash
-pip install matplotlib
-```
-**3. Set up the database:**
-Before running either app, you must run the setup script once to create the nutriscale.db file and all the necessary tables.
-```bash
-python database_setup.py
-```
-This will create nutriscale.db in your project folder.
-
-
-## How to Run
-
-**Client Application**
-Run the main client app to log in, sign up, and track your meals.
-```bash
-python nutriscale_app.py
-```
-The first time you run it, click "Sign Up" to create a profile.
-After that, you can use the Login screen.
-
-**Admin Panel**
-Run the admin app to manage the food database or delete users.
 
 ```bash
-python admin_app.py
+pip install pandas numpy
 ```
-This app runs completely independently of the client app.
-Changes made here (like adding a new food) will be instantly available in the client app.
 
+**3. Run the application:**
 
-# Through this project, we learned:
+```bash
+python main_module.py
+```
 
-How to handle user input and conditional logic in Python.
+> The program automatically initializes the food database if it does not exist.
 
-Basic principles of calorie balance and macronutrient distribution.
+---
 
-How to design a simple console-based user interface.
+## How to Use
+
+**Client Portal:**
+
+1. Choose `2` in main menu.
+2. Enter your **weight, height, age, gender, and target weight**.
+3. See BMI, recommended calories, and meal suggestions.
+4. Optionally customize your meal plan manually.
+5. Daily logs are saved automatically in `nutriscale_logs.csv`.
+
+**Admin Portal:**
+
+1. Choose `1` in main menu.
+2. Use the options to **view, add, update, or delete foods**.
+3. Initialize default database if needed.
+
+---
+
+## 📂 Team Collaboration Tips
+
+* Each team member can work independently:
+
+  * **Module 1:** `database_module.py` → database and log management
+  * **Module 2:** `calculator_module.py` → calculations & meal combination logic
+  * **Module 3:** `main_module.py` → CLI interface, client/admin integration
+
+* Changes in the food database instantly reflect for all users.
+
+---
+
+## ✅ Learning Outcomes
+
+* Handling user input and conditional logic in Python
+* Modular programming & decorators
+* Collections, searching, and sorting
+* Backtracking algorithms for meal suggestions
+* File-based data persistence using CSV
