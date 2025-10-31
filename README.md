@@ -1,114 +1,105 @@
-# NutriScale: CLI-Based Intelligent Nutrition & Fitness Tracker 🍎
+# 🥗 NutriScale: CLI-Based Intelligent Nutrition & Fitness Tracker
 
-NutriScale is a **Python-based command-line nutrition management system**. It provides a complete solution for tracking dietary intake, logging meals, and visualizing progress toward weight goals.
+**NutriScale** is a Python-based **command-line nutrition management system** that helps users track meals, calculate calorie needs, and maintain fitness goals — all from the terminal.
 
-Unlike GUI-based applications, this version is lightweight and terminal-friendly, suitable for multi-platform usage and team projects.
-
-It helps users maintain a balanced diet by calculating **BMR, daily calorie requirements**, and suggests meal plans based on caloric needs. Users can either accept automated meal suggestions or manually customize meals using a rich food database.
-
-An **Admin Portal** allows management of the food database with CRUD operations.
+It’s a complete, syllabus-aligned project combining **data structures, file handling, decorators, recursion, and algorithms**.  
+Built for **academic submissions, teamwork**, and real-world demonstration of Python proficiency.
 
 ---
 
-## Project Structure
+## 📦 Overview
 
-The project is modularized into three Python files:
+NutriScale enables users to:
+- Calculate **BMI**, **BMR**, and **TDEE** using personal data  
+- Get **health-based recommendations** (e.g., if BMI is low, the app advises eating more)  
+- Track **daily calorie intake** and **nutritional balance**  
+- Create **custom meals** from a food database  
+- Log data automatically to CSV files for long-term progress tracking  
+- Allow admins to **manage food items and view registered users**
 
-| Module                 | Description                                                                                                       |
-| :--------------------- | :---------------------------------------------------------------------------------------------------------------- |
-| `database_module.py`   | Handles the **food database**, CRUD operations, and **daily logs**.                                               |
-| `calculator_module.py` | Calculates **BMI, calorie goals**, and provides **meal combination logic** using backtracking.                    |
-| `main_module.py`       | Implements the **CLI menus**, integrates database and calculator modules, and handles **client & admin portals**. |
-
----
-
-## Features
-
-### 🔑 Client Portal (`main_module.py`)
-
-* **Personalized Profile:** Users input age, weight, height, gender, and target weight to calculate:
-
-  * **BMI**
-  * **Recommended daily calories**
-  * **Estimated time to reach goal**
-* **Meal Suggestions:** Based on calculated calories, the system suggests a combination of foods from the database.
-* **Custom Meal Planning:** Users can manually select foods and the program tracks total calories.
-* **Daily Logs:** All meals and calories are logged with timestamps for future review.
-
-### 🛠️ Admin Portal (`main_module.py`)
-
-* **Food Database Management (CRUD):**
-
-  * **Create:** Add new foods with calories.
-  * **Read:** View all foods in the database.
-  * **Update:** Modify calorie values of existing foods.
-  * **Delete:** Remove foods from the database.
-* **Database Initialization:** Admin can populate the database with a default set of foods.
+All interactions are through a clean and friendly **CLI interface**, with menus, validation, and logging.
 
 ---
 
-## 🚀 Technical Stack
+## 🧩 Project Structure
 
-* **Language:** Python 3.x
-* **Database:** CSV-based storage for **foods** and **logs** (`food_database.csv`, `nutriscale_logs.csv`)
-* **CLI:** Terminal-based, cross-platform, no GUI dependencies
+| File | Description |
+|------|--------------|
+| `nutriscale_full.py` | Complete CLI app (Admin + Client) |
+| `food_database.csv` | Stores food names and calorie data |
+| `users.csv` | Stores user profiles and goals |
+| `nutriscale_logs.csv` | Daily log of user food intake |
+
+---
+
+## 🌟 Key Features
+
+### 👤 **Client Portal**
+
+- **User Registration & Login**  
+  Users can sign up with their details — name, age, height, weight, gender, and activity level.
+
+- **BMI & Health Insights**  
+  Calculates BMI and provides category feedback:
+  - 🟢 *Healthy (18.5–24.9)* — Great job maintaining balance!
+  - 🟡 *Underweight (<18.5)* — You should eat more; increase calories gradually.
+  - 🔴 *Overweight (25–29.9)* — Try moderate calorie control and regular exercise.
+  - ⚠️ *Obese (>30)* — Consider consulting a doctor and following a calorie deficit diet.
+
+- **Personalized Calorie & Macronutrient Goals**  
+  Based on the user’s BMR, activity level, and goal (gain or lose weight).
+
+- **Meal Customization**  
+  Users can search for foods from the database and build custom meal plans.
+
+- **Smart Food Recommendations**  
+  Suggests balanced foods using backtracking and greedy algorithms.
+
+- **Daily Progress Tracker**  
+  Every day’s meal and calorie intake is saved to a CSV file (`nutriscale_logs.csv`).
+
+- **Data Export**  
+  Users can export their logs in `.csv` or `.json` formats.
+
+---
+
+### 🧑‍💼 **Admin Portal**
+
+The admin has access to manage the food database and registered users.
+
+**Features include:**
+- ➕ **Add new foods** with their calorie count  
+- ✏️ **Update** existing food data  
+- 🗑️ **Delete** unwanted foods  
+- 📋 **View all foods** currently stored in the database  
+- 👥 **View all registered users** (with details from `users.csv`)  
+- 🧹 **Initialize** or reset the database (optional)
+
+---
+
+## 🧠 Technical Highlights
+
+- **Language:** Python 3.x  
+- **Core Concepts Used:**
+  - Decorators (for logging function calls)
+  - File Handling (CSV read/write)
+  - Backtracking & Sorting algorithms
+  - Stacks and Queues (for food suggestion history)
+  - Recursion (used in search/sort)
+  - Pandas for efficient CSV handling
+- **Libraries:**  
+  - `pandas` – data handling  
+  - `numpy` – calculations  
 
 ---
 
 ## ⚙️ Installation & Setup
 
-**1. Clone the repository:**
-
+### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/VK777s/NutriScale.git
 cd NutriScale
 ```
-
-**2. Install dependencies:**
-
-```bash
-pip install pandas numpy
-```
-
-**3. Run the application:**
-
-```bash
-python main_module.py
-```
-
-> The program automatically initializes the food database if it does not exist.
-
----
-
-## How to Use
-
-**Client Portal:**
-
-1. Choose `2` in main menu.
-2. Enter your **weight, height, age, gender, and target weight**.
-3. See BMI, recommended calories, and meal suggestions.
-4. Optionally customize your meal plan manually.
-5. Daily logs are saved automatically in `nutriscale_logs.csv`.
-
-**Admin Portal:**
-
-1. Choose `1` in main menu.
-2. Use the options to **view, add, update, or delete foods**.
-3. Initialize default database if needed.
-
----
-
-## 📂 Team Collaboration Tips
-
-* Each team member can work independently:
-
-  * **Module 1:** `database_module.py` → database and log management
-  * **Module 2:** `calculator_module.py` → calculations & meal combination logic
-  * **Module 3:** `main_module.py` → CLI interface, client/admin integration
-
-* Changes in the food database instantly reflect for all users.
-
----
 
 ## ✅ Learning Outcomes
 
