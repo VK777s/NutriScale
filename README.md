@@ -103,10 +103,10 @@ Run the following command in your terminal or VS Code:
 
 ```bash
 pip install pandas
+pip install numpy
 pip install matplotlib
 pip install tabulate
 pip install prettytable
-pip install numpy
 pip install datetime
 pip install colorama
 ```
