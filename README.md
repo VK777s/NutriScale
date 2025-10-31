@@ -94,11 +94,28 @@ The admin has access to manage the food database and registered users.
 ---
 
 ## ⚙️ Installation & Setup
+---
 
-### 1️⃣ Clone the Repository
+## 📦 Step 2: Install Required Libraries
+
+NutriScale uses a few external Python libraries.  
+Run the following command in your terminal or VS Code:
+
+```bash
+pip install pandas
+pip install matplotlib
+pip install tabulate
+pip install prettytable
+pip install numpy
+pip install datetime
+pip install colorama
+```
+
+###  Clone the Repository
 ```bash
 git clone https://github.com/VK777s/NutriScale.git
 cd NutriScale
+
 ```
 
 ## ✅ Learning Outcomes
