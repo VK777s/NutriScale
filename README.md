@@ -1,6 +1,6 @@
 # 🥗 NutriScale: CLI-Based Intelligent Nutrition & Fitness Tracker
 
-**NutriScale** is a Python-based **command-line nutrition management system** that helps users track meals, calculate calorie needs, and maintain fitness goals — all from the terminal.
+**NutriScale** is a Python-based **command-line nutrition management system** that helps users track meals, calculate calorie needs — all from the terminal.
 
 It’s a complete, syllabus-aligned project combining **data structures, file handling, decorators, recursion, and algorithms**.  
 Built for **academic submissions, teamwork**, and real-world demonstration of Python proficiency.
