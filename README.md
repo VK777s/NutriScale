@@ -1,4 +1,4 @@
-# 🥗 NutriScale: CLI-Based Intelligent Nutrition & Fitness Tracker
+# NutriScale: CLI-Based Intelligent Nutrition & Fitness Tracker
 
 **NutriScale** is a Python-based **command-line nutrition management system** that helps users track meals, calculate calorie needs — all from the terminal.
 
@@ -7,7 +7,7 @@ Built for **academic submissions, teamwork**, and real-world demonstration of Py
 
 ---
 
-## 📦 Overview
+## Overview
 
 NutriScale enables users to:
 - Calculate **BMI**, **BMR**, and **TDEE** using personal data  
@@ -21,7 +21,7 @@ All interactions are through a clean and friendly **CLI interface**, with menus,
 
 ---
 
-## 🧩 Project Structure
+## Project Structure
 
 | File | Description |
 |------|--------------|
@@ -32,9 +32,9 @@ All interactions are through a clean and friendly **CLI interface**, with menus,
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
-### 👤 **Client Portal**
+### **Client Portal**
 
 - **User Registration & Login**  
   Users can sign up with their details — name, age, height, weight, gender, and activity level.
@@ -63,21 +63,21 @@ All interactions are through a clean and friendly **CLI interface**, with menus,
 
 ---
 
-### 🧑‍💼 **Admin Portal**
+### **Admin Portal**
 
 The admin has access to manage the food database and registered users.
 
 **Features include:**
-- ➕ **Add new foods** with their calorie count  
-- ✏️ **Update** existing food data  
-- 🗑️ **Delete** unwanted foods  
-- 📋 **View all foods** currently stored in the database  
-- 👥 **View all registered users** (with details from `users.csv`)  
-- 🧹 **Initialize** or reset the database (optional)
+- **Add new foods** with their calorie count  
+- **Update** existing food data  
+- **Delete** unwanted foods  
+- **View all foods** currently stored in the database  
+- **View all registered users** (with details from `users.csv`)  
+- **Initialize** or reset the database (optional)
 
 ---
 
-## 🧠 Technical Highlights
+##  Technical Highlights
 
 - **Language:** Python 3.x  
 - **Core Concepts Used:**
@@ -93,10 +93,10 @@ The admin has access to manage the food database and registered users.
 
 ---
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 ---
 
-## 📦 Step 2: Install Required Libraries
+## Step 2: Install Required Libraries
 
 NutriScale uses a few external Python libraries.  
 Run the following command in your terminal or VS Code:
@@ -115,13 +115,3 @@ pip install colorama
 ```bash
 git clone https://github.com/VK777s/NutriScale.git
 cd NutriScale
-
-```
-
-## ✅ Learning Outcomes
-
-* Handling user input and conditional logic in Python
-* Modular programming & decorators
-* Collections, searching, and sorting
-* Backtracking algorithms for meal suggestions
-* File-based data persistence using CSV
